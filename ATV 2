@@ -1,0 +1,103 @@
+#1
+
+def filtrar_impares(lista):
+    return [numero for numero in lista if numero % 2 != 0]
+
+#2
+
+def is_primo(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def filtrar_primos(lista):
+    return [numero for numero in lista if is_primo(numero)]
+#3
+
+def elementos_unicos(lista1, lista2):
+    return list(set(lista1) ^ set(lista2))
+
+#4
+
+def segundo_maior(lista):
+    lista_unica = list(set(lista))  # Remove duplicatas
+    lista_unica.sort()  # Ordena a lista
+    return lista_unica[-2] if len(lista_unica) > 1 else None  # Retorna o segundo maior
+
+#5
+
+def ordenar_por_nome(lista):
+    return sorted(lista, key=lambda x: x[0])
+
+#6
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig, axs = plt.subplots(ncols=2, nrows=2, figsize=(5.5, 3.5), layout="constrained")
+for row in range(2):
+    for col in range(2):
+        axs[row, col].annotate(f'axs[{row}, {col}]', (0.5, 0.5), transform=axs[row, col].transAxes, ha='center', va='center', fontsize=18, color='darkgrey')
+fig.suptitle('plt.subplots()')
+
+#7
+
+import numpy as np
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+
+x = np.linspace(-2 * np.pi, 2 * np.pi, 100)
+y = np.sin(x)
+
+fig, ax = plt.subplots()
+ax.plot(x, y)
+
+#8
+
+import pandas as pd
+
+# Leitura do arquivo CSV para um DataFrame
+df = pd.read_csv('caminho/do/arquivo.csv')
+
+# Exibindo as primeiras 5 linhas do DataFrame
+print(df.head())  # Para visualizar as primeiras 5 linhas
+
+#9
+
+import pandas as pd
+
+# Exemplo de DataFrame
+df = pd.read_csv('caminho/do/arquivo.csv')
+
+# Selecionando uma coluna específica
+coluna = df['nome_da_coluna']
+
+# Filtrando linhas com base em uma condição
+df_filtrado = df[df['nome_da_coluna'] > 10]  # Exemplo de filtro (valores maiores que 10)
+
+# Exibindo o resultado
+print(df_filtrado)
+
+#10
+
+import pandas as pd
+
+# Exemplo de DataFrame com NaN
+df = pd.read_csv('caminho/do/arquivo.csv')
+
+# Verificando valores ausentes (NaN)
+print(df.isna())  # Exibe um DataFrame de True/False, indicando onde há NaN
+print(df.isna().sum())  # Exibe a quantidade de NaN por coluna
+
+# Preenchendo valores ausentes com um valor específico
+df.fillna(0, inplace=True)  # Preenche todos os NaN com o valor 0
+
+# Removendo linhas com valores ausentes
+df.dropna(inplace=True)  # Remove todas as linhas com pelo menos um NaN
+
+# Removendo colunas com valores ausentes
+df.dropna(axis=1, inplace=True)  # Remove todas as colunas com pelo menos um NaN
+
