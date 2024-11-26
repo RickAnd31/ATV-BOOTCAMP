@@ -85,7 +85,7 @@ O OpenCV é uma das bibliotecas mais populares para tarefas de segmentação de 
 Segmentação baseada em limiarização: Onde a imagem é dividida em duas regiões com base no valor de intensidade de pixels. Pode ser feita de maneira global ou adaptativa.
 segmentação de cores: Usando a segmentação baseada em características de cores de objetos presentes na imagem.
 Segmentação por contornos: Utiliza algoritmos como Canny para detectar bordas e segmentar as regiões da imagem com base nos contornos dos objetos.
-Segmentação de regiões**: Onde a imagem é dividida em regiões homogêneas com base em alguma métrica, como a intensidade média de pixels.
+Segmentação de regiões: Onde a imagem é dividida em regiões homogêneas com base em alguma métrica, como a intensidade média de pixels.
 
 scikit-image 
 O scikit-image é uma biblioteca Python construída sobre o scikit-learn, que oferece ferramentas avançadas para segmentação de imagens. Alguns dos algoritmos fornecidos por essa biblioteca incluem:  
